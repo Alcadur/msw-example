@@ -27,7 +27,26 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+      <link
+          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Sniglet:wght@400;800&display=swap"
+          rel="stylesheet" />
+      <link
+          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Sniglet:wght@400;800&display=swap"
+          rel="stylesheet" />
+    </head>
+    <body className="min-h-full flex flex-col">
+    <main className="main-container">
+
+      <div className="main-frame">
+          {children}
+      </div>
+      <div className="main-frame-content">
+      </div>
+    </main>
+    </body>
     </html>
   );
 }
