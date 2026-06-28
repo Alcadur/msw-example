@@ -1,11 +1,8 @@
 import { http, HttpResponse } from 'msw'
+import { Meals } from "@/src/mocks/mockData/meals";
 
 export const handlers = [
-    http.get('/api/hello', () => {
-        return HttpResponse.json({
-            id: 'abc-123',
-            firstName: 'John',
-            lastName: 'Maverick',
-        })
+    http.get('/api/meals', () => {
+        return HttpResponse.json(Meals)
     }),
 ]
