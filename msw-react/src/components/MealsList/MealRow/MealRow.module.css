@@ -1,0 +1,28 @@
+.row {
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+.imageContainer {
+    width: 150px;
+    margin: auto;
+
+    img {
+        margin-inline: auto;
+        height: 59px;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.button {
+    font: var(--header-font-bold);
+
+    text-align: center;
+    padding-block: 5px;
+}
