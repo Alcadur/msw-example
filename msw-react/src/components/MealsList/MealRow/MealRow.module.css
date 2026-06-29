@@ -1,4 +1,14 @@
 .row {
+    --element-color: #c0d696;
+
+    &.error {
+        --element-color: #d30f0f;
+    }
+
+    &.added {
+        --element-color: #5fabbd;
+    }
+
     position: relative;
     display: flex;
     gap: 10px;
@@ -21,8 +31,23 @@
 }
 
 .button {
+    --element-color: #8bac5d;
     font: var(--header-font-bold);
 
     text-align: center;
     padding-block: 5px;
+}
+
+.error,
+.loading {
+    text-align: center;
+    padding-block: 5px;
+}
+
+.error {
+    --element-color: #d86969;
+}
+
+.loading {
+    --element-color: #69add8;
 }
