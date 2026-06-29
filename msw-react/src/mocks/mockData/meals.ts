@@ -1,6 +1,6 @@
 import { Meal } from "@/src/models/meal";
 
-export const Meals: Meal[] = [
+export const meals: Meal[] = [
     {
         "id": "1",
         "name": "French Fries",
