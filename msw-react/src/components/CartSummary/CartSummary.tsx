@@ -1,17 +1,16 @@
-import styles from './CartSummary.module.css'
+import styles from "./CartSummary.module.css";
 import clsx from "clsx";
 import { CSSProperties, useState } from "react";
 import { emitEvent, useEvents } from "@alcadur/react-events-hook";
 import { EVENTS } from "@/src/models/events";
 import { useCartSummary } from "@/src/components/CartSummary/useCartSummary";
-import { Meal } from "@/src/models/meal";
 import { CartSummaryModel } from "@/src/models/cartSummary";
 
 export const CartSummary = () => {
     const [summary, setSummary] = useState<CartSummaryModel>({ totalItems: 0, totalPrice: 0 })
     const { fetchCartSummary, clearCartSummary, isLoading } = useCartSummary();
 
-    const handleCartUpdate = async (meal: Meal) => {
+    const handleCartUpdate = async () => {
         const fetchedSummary = await fetchCartSummary()
         setSummary(fetchedSummary)
     }

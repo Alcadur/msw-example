@@ -9,7 +9,7 @@ export const useAddAction = () => {
         setIsLoading(true);
         return fetch(`/api/meals/add/${id}`, { method: 'POST' })
             .then(response => {
-                if (response.status < 200 || response.status > 299) {
+                if (!response.ok) {
                     setHasError(true);
                     return false;
                 }

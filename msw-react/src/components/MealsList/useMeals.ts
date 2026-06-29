@@ -7,6 +7,7 @@ export const useMeals = () => {
     const [hasError, setHasError] = useState(false);
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setIsLoading(true);
         fetch('/api/meals').then(res => res.json()).then((res) => {
             setMeals(res);

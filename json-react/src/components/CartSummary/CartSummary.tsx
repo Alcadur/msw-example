@@ -13,7 +13,7 @@ export const CartSummary = () => {
 
     const isLoading = false
 
-    const handleCartUpdate = async (meal: Meal) => {
+    const handleCartUpdate = async () => {
         setSummary(summaryMocked)
     }
 

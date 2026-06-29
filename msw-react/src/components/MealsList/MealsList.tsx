@@ -11,6 +11,7 @@ export const MealsList = ({ classList }: MealsListProps) => {
     const { meals, isLoading, hasError } = useMeals()
 
     return <div className={clsx(styles.list, classList)}>
+        {isLoading && <div>Loading...</div>}
         {meals.map(meal => <MealRow key={meal.id} meal={meal} />)}
         </div>
 }

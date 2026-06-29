@@ -38,7 +38,6 @@ export const MealRow = ({ meal }: MealRowProps) => {
         <div className={styles.imageContainer}>
             <img src={meal.imageUrl} className={styles.image} alt={meal.name} />
         </div>
-        <Fragment ></Fragment>
         <div className={styles.info}>
             <h4>{meal.name}</h4>
             <p>{meal.description}</p>
