@@ -1,0 +1,28 @@
+.section {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.itemsList {
+    margin-bottom: 12px;
+}
+
+.header {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h6 {
+        font-size: 9px;
+        text-align: center;
+        margin: 0;
+    }
+}

@@ -1,0 +1,17 @@
+.cartSummary {
+    padding-inline: 15%;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+
+    button {
+        flex: 1 1 auto;
+    }
+
+    button:first-child {
+        --element-color: #ca1414;
+        color: hsl(from var(--element-color) h s calc(l * 2));
+    }
+}

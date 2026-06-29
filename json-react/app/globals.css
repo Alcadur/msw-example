@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+    --header-font-normal: normal 400 "Sniglet", system-ui;
+    --header-font-bold: normal 800 "Sniglet", system-ui;
+    --body-font-normal: normal 400 "Sniglet", system-ui;
+    --body-font-bold: normal 800 "Sniglet", system-ui;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font: normal 400 20px "Sniglet", system-ui;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font: var(--body-font-normal);
+
+    background: url("/background.png") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main-container {
+    position: relative;
+}
+
+.main-frame {
+    --element-min-width: 320px;
+    --element-width: min(579px, 100vw);
+    --element-ration: calc(820 / 579);
+
+    position: relative;
+    z-index: 2;
+    background: url("/container.png") no-repeat center center / cover ;
+    min-width: var(--element-min-width);
+    width: var(--element-width);
+    max-height: 100vh;
+    min-height: calc(var(--element-min-width) * var(--element-ration));
+    height: calc(var(--element-width) * var(--element-ration));
+    padding: 8% 18% 11% 18%;;
+}
+
+.main-frame-content {
+    position: absolute;
+    z-index: 1;
+    inset: 3% 9%;
+    background: url("/panel-background.png");
+}
+
+.bordered-element {
+    --element-color: var(--element-color);
+    --element-color-or-default: var(--element-color, #9699d6);
+    --border-color: hsl(from var(--element-color-or-default) calc(h + 8.76) calc(s - 14.85) calc(l - 38.23));
+
+    background-color: var(--element-color-or-default);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 7px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+        --hover-mod: var(--hover-mod);
+        --hover-mod-or-default: var(--hover-mod, 1);
+
+        button {
+            --hover-mod-or-default: var(--hover-mod, 1.5);
+            cursor: pointer;
+        }
+
+        background-color: hsl(from var(--element-color-or-default) h calc(s * var(--hover-mod-or-default)) l);
+        border-color: hsl(from var(--border-color) h calc(s * var(--hover-mod-or-default)) l);
+    }
+}
